@@ -1,3 +1,4 @@
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Soenneker.Blazor.Utils.BlazorOutputInvoker.Abstract;
@@ -11,6 +12,7 @@ public interface IBlazorOutputInvoker<in TInput, TOutput>
     /// Invokes the Blazor invoker.
     /// </summary>
     /// <param name="args">The input argument.</param>
+    /// <param name="cancellationToken"></param>
     /// <returns>A <see cref="ValueTask{TOutput}"/> representing the asynchronous operation and containing the output result.</returns>
-    ValueTask<TOutput> InvokeWithOutput(TInput args);
+    ValueTask<TOutput> InvokeWithOutput(TInput args, CancellationToken cancellationToken = default);
 }
