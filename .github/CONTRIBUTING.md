@@ -1,4 +1,4 @@
-# Contributing to Soenneker.Blazor.Utils.BlazorOutputInvoker
+﻿# Contributing to Soenneker.Blazor.Utils.BlazorOutputInvoker
 
 We're excited that you're interested in contributing!
 
