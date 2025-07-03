@@ -7,7 +7,7 @@ using Microsoft.JSInterop;
 namespace Soenneker.Blazor.Utils.BlazorOutputInvoker;
 
 ///<inheritdoc cref="IBlazorOutputInvoker{TInput,TOutput}"/>
-public class BlazorOutputInvoker<TInput, TOutput> : IBlazorOutputInvoker<TInput, TOutput>
+public sealed class BlazorOutputInvoker<TInput, TOutput> : IBlazorOutputInvoker<TInput, TOutput>
 {
     private readonly Func<TInput, ValueTask<TOutput>> _func;
 
