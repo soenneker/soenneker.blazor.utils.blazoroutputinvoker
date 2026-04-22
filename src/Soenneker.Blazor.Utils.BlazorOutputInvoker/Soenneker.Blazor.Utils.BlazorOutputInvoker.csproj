@@ -42,6 +42,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.JSInterop" Version="10.0.6" />
+        <PackageReference Include="Microsoft.JSInterop" Version="10.0.7" />
     </ItemGroup>
 </Project>
