@@ -11,10 +11,6 @@ public sealed class BlazorOutputInvoker<TInput, TOutput> : IBlazorOutputInvoker<
 {
     private readonly Func<TInput, ValueTask<TOutput>> _func;
 
-    /// <summary>
-    /// Initializes a new instance of the <see cref="BlazorOutputInvoker{TInput,TOutput}"/> class.
-    /// </summary>
-    /// <param name="invoker">The invoker function.</param>
     [DynamicDependency(nameof(InvokeWithOutput))]
     public BlazorOutputInvoker(Func<TInput, ValueTask<TOutput>> invoker)
     {
