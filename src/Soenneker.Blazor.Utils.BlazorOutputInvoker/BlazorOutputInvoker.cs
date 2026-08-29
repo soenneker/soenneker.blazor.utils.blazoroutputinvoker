@@ -14,6 +14,7 @@ public sealed class BlazorOutputInvoker<TInput, TOutput> : IBlazorOutputInvoker<
     [DynamicDependency(nameof(InvokeWithOutput))]
     public BlazorOutputInvoker(Func<TInput, ValueTask<TOutput>> invoker)
     {
+        ArgumentNullException.ThrowIfNull(invoker);
         _func = invoker;
     }
 
